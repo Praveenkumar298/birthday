@@ -88,6 +88,27 @@ main{position:relative}.hero,.gift-section,.note,.album,.cake-section,.final{min
 .music-control button:hover{transform:translateY(-2px)}
 @media(max-width:700px){.music-control{right:10px;bottom:10px}.music-control button{font-size:12px;padding:9px 12px}}
 
+.photo {
+    overflow: hidden;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+.photo .caption {
+    display: block;
+    padding: 10px;
+}
+
 </style>
 </head>
 <body>
@@ -125,20 +146,10 @@ main{position:relative}.hero,.gift-section,.note,.album,.cake-section,.final{min
  <p>Some people have a way of making ordinary moments memorable. You bring your own rhythm to life — with your teaching, your dedication and, of course, that unmistakable Kathak grace. Wishing you a year full of happiness, beautiful stages, proud moments and lots of reasons to laugh with your best friends. ❤️</p>
 </section>
 
-<section class="album" id="memories">
- <div class="label">Step 2 · The photo album</div><h2>Vanshika's little memory wall 📸</h2>
- <!-- <p class="copy">Put her photos in the <b>images</b> folder as photo1.jpg, photo2.jpg, photo3.jpg and photo4.jpg. When the box opens, they pop outward and gently float around it.</p> -->
- <div class="grid" id="grid">
-  <button class="photo tall" data-title="Vanshika · Memory 1"><div class="placeholder">YOUR PHOTO 1</div><span class="caption">A memory worth keeping 🌸</span></button>
-  <button class="photo" data-title="Vanshika · Memory 2"><div class="placeholder">YOUR PHOTO 2</div><span class="caption">That smile 😄</span></button>
-  <button class="photo" data-title="Vanshika · Memory 3"><div class="placeholder">YOUR PHOTO 3</div><span class="caption">Bestie archive ✨</span></button>
-  <button class="photo wide" data-title="Vanshika · Memory 4"><div class="placeholder">YOUR PHOTO 4</div><span class="caption">One for the memory book</span></button>
- </div>
- <label class="btn secondary upload">📷 Preview her photos <input id="upload" type="file" accept="image/*" multiple></label>
-</section>
+
 
 <section class="cake-section" id="wish">
- <div class="label">Step 3 · Make a wish</div><h2>Now it's time to blow the candles 🎂</h2>
+ <div class="label">Step 2 · Make a wish</div><h2>Now it's time to blow the candles 🎂</h2>
  <p class="copy">Tap each flame to blow it out. We'll save the wish for the end.</p>
  <div class="cake"><div class="candles">
   <div class="candle"><button class="flame">🔥</button><span class="smoke">💨</span></div>
@@ -148,7 +159,35 @@ main{position:relative}.hero,.gift-section,.note,.album,.cake-section,.final{min
  <p id="hint" class="copy">3 flames left — make a wish ✨</p>
  <div id="wish" class="wish hide">All candles out! 🎉 May this year bring Vanshika beautiful performances, wonderful students, new adventures, good health, endless laughter and many, many happy memories. Happy Birthday! 🥳</div>
 </section>
+<section class="album" id="memories">
+  <div class="label">Step 3 · The photo album</div>
 
+  <h2>Vanshika's little memory wall 📸✨</h2>
+
+  <div class="grid" id="grid">
+
+    <button class="photo" data-title="Vanshika · Memory 1">
+      <img src="images/photo7.jpg" alt="Vanshika Memory 1">
+      <span class="caption">A beautiful memory ❤️</span>
+    </button>
+
+    <button class="photo" data-title="Vanshika · Memory 2">
+      <img src="images/photo6.jpg" alt="Vanshika Memory 2">
+      <span class="caption">That smile 😊✨</span>
+    </button>
+
+    <button class="photo" data-title="Vanshika · Memory 3">
+      <img src="images/photo5.jpg" alt="Vanshika Memory 3">
+      <span class="caption">Bestie memories 📸❤️</span>
+    </button>
+
+    <button class="photo wide" data-title="Vanshika · Memory 4">
+      <img src="images/photo8.jpg" alt="Vanshika Memory 4">
+      <span class="caption">Another beautiful moment ✨</span>
+    </button>
+
+  </div>
+</section>
 <section class="final"><div class="bell">🔔</div><div class="label">From your best friend</div><h2>Happy Birthday, Vanshika! 🌸</h2><p class="copy">May your year have perfect rhythm, beautiful moments and just enough madness to keep life interesting. 😄</p><button class="btn secondary" id="replay">↻ Replay the surprise</button></section>
 
 <div class="lightbox hide" id="lightbox"><button class="close" id="close">×</button><div><img id="lbimg"><h3 id="lbtitle"></h3></div></div>
